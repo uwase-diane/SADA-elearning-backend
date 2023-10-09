@@ -4,5 +4,5 @@ from .models import Course
 class CourseSerializer(serializers.ModelSerializer):
 
     class Meta:
-        mode = Course
-        field = '__all__'
+        model = Course
+        fields = ('__all__')
