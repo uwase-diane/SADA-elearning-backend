@@ -1,8 +1,9 @@
 from django.shortcuts import render
+from .serializers import CourseSerializer
 from .models import Course
 from rest_framework import generics
-from .serializers import CourseSerializer
 
+# from .views import UserRegister 
 def home(request):
     context={}
     return render(request, "onlineApp/Homepage.html", context)
@@ -18,12 +19,13 @@ class AllCourses(generics.ListCreateAPIView):
     queryset = Course.objects.all()
 
 
+
+
 class CourseDetails(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = CourseSerializer
     queryset = Course.objects.all()
 
+# permission_classes = (permissions.IsAuthenticated,)
 
 
-# def enroll_course(request):
 
-#     return render "Homepage.html"
