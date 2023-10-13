@@ -8,11 +8,18 @@ class Course(models.Model):
 
     description = models.TextField(default='')
 
-    image = models.ImageField(upload_to='')
+    image = models.ImageField(upload_to='images/')
+
+    @property
+    def image_url(self):
+        if self.image and hasattr(self.image, 'url'):
+            return self.image.url
+        else:
+            return None
 
     # string representation - in this case we will return the title
     def __str__(self):
-        return self.title
+        return self.course_name
 
 class MyUserManager(BaseUserManager):
     def create_user(self, email, firstName, lastName, password=None):
