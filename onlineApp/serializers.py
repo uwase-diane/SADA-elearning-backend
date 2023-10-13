@@ -21,13 +21,13 @@ class RegistrationSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = MyUser
-        fields = ['email','firstName','lastName','password']
+        fields = ['email','first_name','last_name','password']
         extra_kwargs = {
             'password': {'write_only':True}
         }
 
     def save(self):
-        user =  MyUser(email=self.validated_data['email'],firstName = self.validated_data['firstName'],lastName = self.validated_data['lastName'])
+        user =  MyUser(email=self.validated_data['email'],first_name = self.validated_data['first_name'],last_name = self.validated_data['last_name'])
         password = self.validated_data['password']
        
         user.set_password(password)

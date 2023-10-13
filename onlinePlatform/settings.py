@@ -27,8 +27,9 @@ SECRET_KEY = 'django-insecure-*#76#+%cff$7ate-y7g__$w$t8ga_4$%^c#6@h#hv7x7)%x0s$
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
-
+              
+                 
+                      
 # Application definition
 
 INSTALLED_APPS = [
@@ -146,10 +147,14 @@ USE_TZ = True
 
 
 # Media files (user-uploaded files)
+
+
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Define the directory where your static files (including images) are located
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
 # Static files (CSS, JavaScript, etc.)
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
