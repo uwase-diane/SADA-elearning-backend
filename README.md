@@ -4,11 +4,13 @@
 
 Firstly, activate the environment 
 
-# Run in you terminal these codes: 
+# Run in your terminal these codes: 
     `py -m venv env`  
     `env\Scripts\activate`  
 
-then, cd online Platform
+#then:
+
+`cd onlinePlatform`
 
 # Install django:
 
@@ -20,6 +22,12 @@ then, cd online Platform
 
 `py manage.py migrate`
 
-# Run the page: 
+# create admin:
 
-py manage.py runserver
+`py manage.py createsuperuser`
+
+# Run the page:
+
+`py manage.py runserver`
+
+
